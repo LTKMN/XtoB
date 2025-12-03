@@ -1,0 +1,287 @@
+.bluesky-repost-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #1185fe;
+  color: #1185fe;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.bluesky-repost-button:hover {
+  background: rgba(17, 133, 254, 0.1);
+}
+
+.bluesky-repost-button svg {
+  flex-shrink: 0;
+}
+
+.bluesky-repost-button.loading {
+  opacity: 0.6;
+  cursor: wait;
+  pointer-events: none;
+}
+
+.bluesky-repost-button.success {
+  background: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+.bluesky-repost-button.error {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: white;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .bluesky-repost-button,
+html[style*="background"] .bluesky-repost-button {
+  border-color: #1d9bf0;
+  color: #1d9bf0;
+}
+
+[data-theme="dark"] .bluesky-repost-button:hover,
+html[style*="background"] .bluesky-repost-button:hover {
+  background: rgba(29, 155, 240, 0.1);
+}
+
+/* Editor Modal Styles */
+.bluesky-editor-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bluesky-editor-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.bluesky-editor-content {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  z-index: 1;
+}
+
+.bluesky-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.bluesky-editor-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.bluesky-editor-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.bluesky-editor-close:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.bluesky-editor-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.bluesky-editor-options {
+  margin-top: 8px;
+}
+
+.bluesky-editor-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  user-select: none;
+}
+
+.bluesky-editor-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #1185fe;
+}
+
+.bluesky-editor-checkbox-label span {
+  line-height: 1.5;
+}
+
+.bluesky-editor-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.bluesky-editor-textarea:focus {
+  outline: none;
+  border-color: #1185fe;
+  box-shadow: 0 0 0 3px rgba(17, 133, 254, 0.1);
+}
+
+.bluesky-editor-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.bluesky-editor-charcount {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.bluesky-editor-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.bluesky-editor-cancel,
+.bluesky-editor-post {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.bluesky-editor-cancel {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.bluesky-editor-cancel:hover {
+  background: #e5e7eb;
+}
+
+.bluesky-editor-post {
+  background: #1185fe;
+  color: white;
+}
+
+.bluesky-editor-post:hover {
+  background: #0e6fd9;
+}
+
+.bluesky-editor-post:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Dark mode support for modal */
+[data-theme="dark"] .bluesky-editor-content,
+html[style*="background"] .bluesky-editor-content {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .bluesky-editor-header,
+html[style*="background"] .bluesky-editor-header {
+  border-bottom-color: #374151;
+}
+
+[data-theme="dark"] .bluesky-editor-header h3,
+html[style*="background"] .bluesky-editor-header h3 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .bluesky-editor-close,
+html[style*="background"] .bluesky-editor-close {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .bluesky-editor-close:hover,
+html[style*="background"] .bluesky-editor-close:hover {
+  background: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .bluesky-editor-textarea,
+html[style*="background"] .bluesky-editor-textarea {
+  background: #111827;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .bluesky-editor-textarea:focus,
+html[style*="background"] .bluesky-editor-textarea:focus {
+  border-color: #1185fe;
+}
+
+[data-theme="dark"] .bluesky-editor-cancel,
+html[style*="background"] .bluesky-editor-cancel {
+  background: #374151;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .bluesky-editor-cancel:hover,
+html[style*="background"] .bluesky-editor-cancel:hover {
+  background: #4b5563;
+}
+
+[data-theme="dark"] .bluesky-editor-checkbox-label,
+html[style*="background"] .bluesky-editor-checkbox-label {
+  color: #f9fafb;
+}

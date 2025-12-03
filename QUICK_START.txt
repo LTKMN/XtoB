@@ -1,0 +1,45 @@
+QUICK START GUIDE
+==================
+
+Follow these steps to get the Tweet to Bluesky extension working:
+
+1. LOAD THE EXTENSION
+   • Open Chrome
+   • Go to chrome://extensions/
+   • Turn ON "Developer mode" (top right toggle)
+   • Click "Load unpacked"
+   • Select this folder (twitter-to-bluesky)
+
+2. GET A BLUESKY APP PASSWORD
+   • Log into Bluesky at https://bsky.app
+   • Go to Settings → App Passwords
+   • Click "Add App Password"
+   • Give it a name (e.g., "Chrome Extension")
+   • Copy the generated password (format: xxxx-xxxx-xxxx-xxxx)
+   • IMPORTANT: Save this password - you can't view it again!
+
+3. CONFIGURE THE EXTENSION
+   • Click the extension icon in Chrome toolbar
+   • Enter your Bluesky handle (e.g., yourname.bsky.social)
+   • Paste the app password you just created
+   • Click "Login to Bluesky"
+
+4. USE IT!
+   • Visit Twitter/X (twitter.com or x.com)
+   • You'll see "Post to Bluesky" buttons under tweets
+   • Click any button to cross-post that tweet to Bluesky
+   • Done! The tweet will appear on your Bluesky feed
+
+NOTES:
+• Your credentials are stored securely in Chrome
+• The extension only posts when you click the button
+• Up to 4 images per tweet are supported
+• Posts are limited to 300 characters (Bluesky's limit)
+
+TROUBLESHOOTING:
+• If buttons don't appear, refresh the Twitter page
+• If login fails, double-check your handle and app password
+• If posts fail, try logging out and back in
+• Make sure your app password hasn't been revoked
+
+Need help? Check the README.md for more details.
