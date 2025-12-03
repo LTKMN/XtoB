@@ -22,7 +22,7 @@ Cross-post tweets to Bluesky with one click! This extension adds a "Post to Blue
 1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable "Developer mode" (toggle in the top right)
 3. Click "Load unpacked"
-4. Select the unzipped `twitter-to-bluesky` folder
+4. Select the unzipped `XtoB-main` folder (note: there might be a folder-within-a-folder with the same name depending on your unzipper -- if Chrome says "can't load manifest" it's because you're trying to upload the top-level folder; instead upload the folder that actually has the files (and manifest.json) inside it)
 5. The extension should now appear in your extensions list
 
 ### Set Up Bluesky Authentication
