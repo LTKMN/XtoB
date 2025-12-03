@@ -12,24 +12,7 @@ Cross-post tweets to Bluesky with one click! This extension adds a "Post to Blue
 
 ## Installation
 
-### Step 1: Create Extension Icons
-
-Before loading the extension, you need to create icon files. Create three PNG images:
-- `icons/icon16.png` (16x16 pixels)
-- `icons/icon48.png` (48x48 pixels)  
-- `icons/icon128.png` (128x128 pixels)
-
-You can use any image editing tool or use a simple blue butterfly/bluesky-themed icon.
-
-**Quick icon creation:**
-```bash
-# If you have ImageMagick installed:
-convert -size 16x16 xc:#1185fe icons/icon16.png
-convert -size 48x48 xc:#1185fe icons/icon48.png
-convert -size 128x128 xc:#1185fe icons/icon128.png
-```
-
-### Step 2: Load the Extension
+### Load the Extension
 
 1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable "Developer mode" (toggle in the top right)
@@ -37,7 +20,7 @@ convert -size 128x128 xc:#1185fe icons/icon128.png
 4. Select the `twitter-to-bluesky` folder
 5. The extension should now appear in your extensions list
 
-### Step 3: Set Up Bluesky Authentication
+### Set Up Bluesky Authentication
 
 1. Click the extension icon in your Chrome toolbar
 2. You'll need to create a Bluesky App Password:
@@ -48,12 +31,16 @@ convert -size 128x128 xc:#1185fe icons/icon128.png
 4. Enter your app password
 5. Click "Login to Bluesky"
 
+   NOTE: this password is only stored locally in your browser, I don't get or want any access to it. It's just the auth to write posts to your account.
+
 ## Usage
 
 1. Visit Twitter/X (twitter.com or x.com)
 2. Look for the "Post to Bluesky" button under each tweet
 3. Click the button to cross-post the tweet to Bluesky
 4. The button will show "Posted!" on success
+
+KNOWN BUG: sometimes the button doesn't show up and you need to refresh. I'm also unclear on which pages it works on (it shows up in the feed but not individual tweets, seemingly, I just haven't gotten around to looking into it yet)
 
 ## What Gets Posted
 
@@ -113,13 +100,7 @@ This extension:
 
 ## Development
 
-Built by: Brennan
+Built by: Sonnet 4.5 (and brennan, sparingly)
 Based on: Chrome Extension Manifest V3 + Bluesky AT Protocol
-
-## License
-
-MIT License - Free to use and modify
-
----
 
 Made with ❤️ for the open social web
